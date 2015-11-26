@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from time import sleep
 import os
@@ -32,7 +33,7 @@ width, height = screen.get_size()
 font = pygame.font.SysFont("verdana", 12, bold=0)
 
 def takepic(imageName):
-    writemessage("taking photo...")
+    writemessage("Tomando foto...")
     command = "sudo raspistill -o " + imageName + " -q 100 -rot 270 -t " + pausa
     print(command)
     os.system(command)
